@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation css</title>
+    <style>
+        .con{
+            width:80vw;
+            height:80vh;
+            margin-top: 300px;
+            margin:auto;
+            background-color: aqua;
+        }
+        .box{
+            background-color: rgb(37, 255, 3);
+            height:40px;
+            width:45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: variables;
+            animation-duration: 3s;
+            animation-timing-function:cubic-bezier(1,-0.2, 0, 1.48);
+            /* animation-direction: alternate-reverse; */
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        .box2{
+            background-color: rgb(37, 255, 3);
+            margin-top: 30px;
+            height:40px;
+            width:45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: Ushaid 3s ease-in 0.5s infinite;
+        }
+        @keyframes variables {
+            from{
+                 background-color: chartreuse;
+            }
+            to{
+                  background-color: rgb(242, 242, 245);
+                  transform: translateX(470px) translatey(250px);
+            }
+        }
+        @keyframes Ushaid {
+            0%{
+                background-color: aquamarine;
+            }
+            20%{
+                transform: translateX(200px);
+            }
+            40%{
+                background-color: burlywood;
+            }
+            60%{
+               transform: translateY(200px);
+            }
+            80%{
+               background-color: brown;
+            }
+            100%{
+                 background-color: antiquewhite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">
+            box
+        </div>
+        <div class="box2">
+            box2
+        </div>
+    </div>
+</body>
+</html>
